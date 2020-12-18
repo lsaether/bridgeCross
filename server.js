@@ -27,6 +27,7 @@ var telegramToken = process.env.TELEGRAM_BOT_TOKEN;
 const DISCORD_TOKEN = process.env.DISCORD_TOKEN;
 var telegramChatId = process.env.TELEGRAM_CHAT_ID;
 var discordChannelId = process.env.DISCORD_CHANNEL_ID;
+const DYN_URL = process.env.DYNO_URL
 const PORT = process.env.PORT || 3000;
 const fetch = require("node-fetch");
 
