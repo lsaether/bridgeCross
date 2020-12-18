@@ -30,10 +30,16 @@ var discordChannelId = process.env.DISCORD_CHANNEL_ID;
 const PORT = process.env.PORT || 3000;
 const fetch = require("node-fetch");
 
+const wakeUpDyno = (url, interval) => {
+  const milliseconds = interval * 60000;
+  setTimeout(() => {
+      fetch(url);
+  }, milliseconds);
+};
+
 // import modules
 const Discord = require("discord.js");
 const client = new Discord.Client();
-const Telegram = require("telegraf/telegram");
 const polka = require("polka");
 const { Telegraf } = require("telegraf");
 
